@@ -7,8 +7,11 @@ export default function Feed({ posts }) {
       <div className="container">
         <div className="row justify-content-center mt-5">
           <ul className="row list-unstyled">
-            {posts.map((post) => (
-              <li className="col-6 justify-content-between mt-5">
+            {posts.map((post, i) => (
+              <li
+                className="col-6 justify-content-between mt-5"
+                key={i}
+              >
                 <a href={`/post/${post._id}`}>
                   <img
                     className="img-fluid"

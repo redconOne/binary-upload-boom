@@ -5,9 +5,9 @@ import Messages from './components/Messages';
 export default function Signup({ messages }) {
   return (
     <Main>
-      <main class="container">
-        <div class="row justify-content-center">
-          <section class="col-6 mt-5">
+      <main className="container">
+        <div className="row justify-content-center">
+          <section className="col-6 mt-5">
             <Messages messages={messages} />
             <form
               action="/signup"
@@ -15,7 +15,7 @@ export default function Signup({ messages }) {
             >
               <div className="mb-3">
                 <label
-                  for="userName"
+                  htmlFor="userName"
                   className="form-label"
                 >
                   User Name
@@ -29,7 +29,7 @@ export default function Signup({ messages }) {
               </div>
               <div className="mb-3">
                 <label
-                  for="exampleInputEmail1"
+                  htmlFor="exampleInputEmail1"
                   className="form-label"
                 >
                   Email address
@@ -50,7 +50,7 @@ export default function Signup({ messages }) {
               </div>
               <div className="mb-3">
                 <label
-                  for="password"
+                  htmlFor="password"
                   className="form-label"
                 >
                   Password
@@ -64,7 +64,7 @@ export default function Signup({ messages }) {
               </div>
               <div className="mb-3">
                 <label
-                  for="confirmPassword"
+                  htmlFor="confirmPassword"
                   className="form-label"
                 >
                   Confirm Password

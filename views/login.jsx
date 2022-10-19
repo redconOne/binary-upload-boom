@@ -15,7 +15,7 @@ export default function Login({ messages }) {
             >
               <div className="mb-3">
                 <label
-                  for="inputEmail"
+                  htmlFor="inputEmail"
                   className="form-label"
                 >
                   Email
@@ -30,7 +30,7 @@ export default function Login({ messages }) {
               </div>
               <div className="mb-3">
                 <label
-                  for="inputPassword"
+                  htmlFor="inputPassword"
                   className="form-label"
                 >
                   Password

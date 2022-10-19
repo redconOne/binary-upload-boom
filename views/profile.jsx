@@ -25,12 +25,12 @@ export default function Profile({ user, posts }) {
               <h2>Add a post</h2>
               <form
                 action="/post/createPost"
-                enctype="multipart/form-data"
+                encType="multipart/form-data"
                 method="POST"
               >
                 <div className="mb-3">
                   <label
-                    for="title"
+                    htmlFor="title"
                     className="form-label"
                   >
                     Title
@@ -44,7 +44,7 @@ export default function Profile({ user, posts }) {
                 </div>
                 <div className="mb-3">
                   <label
-                    for="caption"
+                    htmlFor="caption"
                     className="form-label"
                   >
                     Caption
@@ -57,7 +57,7 @@ export default function Profile({ user, posts }) {
                 </div>
                 <div className="mb-3">
                   <label
-                    for="imgUpload"
+                    htmlFor="imgUpload"
                     className="form-label"
                   >
                     Image
@@ -81,8 +81,11 @@ export default function Profile({ user, posts }) {
           </div>
           <div className="col-6">
             <ul className="row list-unstyled">
-              {posts.map((post) => (
-                <li className="col-6 justify-content-between mt-5">
+              {posts.map((post, i) => (
+                <li
+                  className="col-6 justify-content-between mt-5"
+                  key={i}
+                >
                   <a href={`/post/${post._id}`}>
                     <img
                       className="img-fluid"
