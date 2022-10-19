@@ -7,7 +7,8 @@ function PostList({ posts }) {
       {posts.map((post) => (
         <PostItem
           key={post._id}
-          post={post}
+          _id={post._id}
+          image={post.image}
         />
       ))}
     </ul>
