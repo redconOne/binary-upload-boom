@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from './components/Main.jsx';
+import Messages from './components/Messages.jsx';
 
 export default function Login({ messages }) {
   return (
@@ -7,27 +8,7 @@ export default function Login({ messages }) {
       <main className="container">
         <div className="row justify-content-center">
           <section className="col-6 mt-5">
-            {messages.errors
-              ? messages.errors.map((el, i) => (
-                  <div
-                    key={i}
-                    className="alert alert-danger"
-                  >
-                    {el.msg}
-                  </div>
-                ))
-              : null}
-            {messages.info
-              ? messages.info.map((el, i) => (
-                  <div
-                    className="alert alert-danger"
-                    key={i}
-                  >
-                    {el.msg}
-                  </div>
-                ))
-              : null}
-
+            <Messages messages={messages} />
             <form
               action="/login"
               method="POST"
