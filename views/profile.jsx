@@ -1,5 +1,6 @@
 import React from 'react';
 import Main from './components/Main.jsx';
+import PostList from './components/PostList.jsx';
 
 export default function Profile({ user, posts }) {
   return (
@@ -80,21 +81,7 @@ export default function Profile({ user, posts }) {
             </div>
           </div>
           <div className="col-6">
-            <ul className="row list-unstyled">
-              {posts.map((post, i) => (
-                <li
-                  className="col-6 justify-content-between mt-5"
-                  key={i}
-                >
-                  <a href={`/post/${post._id}`}>
-                    <img
-                      className="img-fluid"
-                      src={post.image}
-                    />
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <PostList posts={posts} />
             <div className="row justify-content-center mt-5">
               <a
                 className="btn btn-primary"
